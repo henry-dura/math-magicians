@@ -142,6 +142,15 @@ If you like this project and want to show your support, please give it a ⭐️!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Acknowledgments
+
+A list of resources that I find helpful and would like to give credit to :
+
+- [Microverse ](https://www.microverse.org)
+- [GitHub ](https://www.github.com)
+- [Youtube ](https://www.youtube.com)
+
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
