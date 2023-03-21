@@ -1,10 +1,5 @@
 import React from 'react';
-
-const Screen = () => (
-  <div className="screen">
-    <p>0</p>
-  </div>
-);
+import Screen from './Screen';
 
 const CalculatorUI = () => (
   <div className="calculator">
@@ -16,6 +11,7 @@ const CalculatorUI = () => (
       <button type="button">%</button>
       <button type="button" className="operation">÷</button>
     </div>
+
     <div className="keys">
       <button type="button">7</button>
       <button type="button">8</button>
