@@ -38,7 +38,7 @@ function FetchData() {
         }
       });
     return () => abortController.abort();
-  }, []);
+  }, [URL]);
 
   return (
     <div className="quote">

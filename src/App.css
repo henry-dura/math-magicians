@@ -8,14 +8,17 @@ html {
   font-size: 62.5%;
   background: papayawhip;
 }
-.content{
+
+.content {
   padding: 2rem;
 }
-p{
+
+p {
   font-size: 4rem;
   line-height: 8rem;
 }
-.calculator-page{
+
+.calculator-page {
   display: flex;
 }
 
@@ -64,26 +67,28 @@ button:hover {
   font-size: 3rem;
   text-align: justify;
 }
-.author{
+
+.author {
   text-align: right;
 }
-nav{
+
+nav {
   display: flex;
   justify-content: space-between;
-  background:wheat;
+  background: wheat;
   padding: 2rem;
   align-items: center;
 }
-.logo{
+
+.logo {
   font-size: 4rem;
 }
-.links{
+
+.links {
   display: flex;
   flex-basis: 20%;
   font-size: 2rem;
   justify-content: space-around;
-  
-
 }
 
 @media screen and (min-width: 768px) {
