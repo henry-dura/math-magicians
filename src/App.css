@@ -53,6 +53,24 @@ button:hover {
   font-size: 3rem;
   text-align: center;
 }
+nav{
+  display: flex;
+  justify-content: space-between;
+  background:papayawhip;
+  padding: 2rem;
+  align-items: center;
+}
+.logo{
+  font-size: 4rem;
+}
+.links{
+  display: flex;
+  flex-basis: 20%;
+  font-size: 2rem;
+  justify-content: space-around;
+  
+
+}
 
 @media screen and (min-width: 768px) {
   .calculator {
