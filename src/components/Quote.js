@@ -1,52 +1,58 @@
 import { useState, useEffect } from 'react';
 
 function FetchData() {
-  const [data, setData] = useState([]);
-  const [hasError, setHasError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [quote, setQuote] = useState(null);
+  const [error, setError] = useState(null);
+  const [Loading, setLoading] = useState(true);
   const category = 'computers';
   const URL = `https://api.api-ninjas.com/v1/quotes?category=${category}`;
   const API_KEY = 'tS3FqQpYl4HPGR1oWdQyBw==63N5k4ADiPcGxWeq';
 
   useEffect(() => {
+    const abortController = new AbortController();
     const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const res = await fetch(URL, {
-          headers: {
-            'X-Api-Key': API_KEY,
-            'Content-Type': 'application/json',
-          },
-        });
-        const json = await res.json();
-        setData(json);
-      } catch (error) {
-        setHasError(true);
+      const response = await fetch(URL, {
+        signal: abortController.signal,
+        headers: {
+          'X-Api-Key': API_KEY,
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!response.ok) {
+        throw new Error('No Data for such endpoint');
       }
-      setIsLoading(false);
+      const data = await response.json();
+
+      setQuote(data);
+      setLoading(false);
+      setError(null);
     };
-    fetchData();
-  }, [setData, setIsLoading]);
+    fetchData()
+      .catch((err) => {
+        // setError(err.message);
+        // setLoading(false);
 
-  if (hasError) return <div className="quote">Something went wrong!</div>;
-
-  if (isLoading) return <div className="quote">Loading...</div>;
+        if (!(err.name === 'AbortError')) {
+          setError(err.message);
+          setLoading(false);
+        }
+      });
+    return () => abortController.abort();
+  }, [URL]);
 
   return (
     <div className="quote">
-      {data.map((item) => (
-        <>
-          <p key={item.id}>{item.quote}</p>
-          <p>
-            By
-            <strong>
-              {' '}
-              {item.author}
-            </strong>
+      {error && <div>{error}</div>}
+      {Loading && <div>LOADING......</div>}
+      {quote && quote.map((item) => (
+        <div className="quote-items" key={item.id}>
+          <p>{item.quote}</p>
+          <p className="author">
+            <strong>{`By ${item.author}`}</strong>
           </p>
-        </>
-
+        </div>
       ))}
+
     </div>
   );
 }

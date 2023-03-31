@@ -6,6 +6,20 @@
 
 html {
   font-size: 62.5%;
+  background: papayawhip;
+}
+
+.content {
+  padding: 2rem;
+}
+
+p {
+  font-size: 4rem;
+  line-height: 8rem;
+}
+
+.calculator-page {
+  display: flex;
 }
 
 .calculator {
@@ -51,7 +65,30 @@ button:hover {
 
 .quote {
   font-size: 3rem;
-  text-align: center;
+  text-align: justify;
+}
+
+.author {
+  text-align: right;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: wheat;
+  padding: 2rem;
+  align-items: center;
+}
+
+.logo {
+  font-size: 4rem;
+}
+
+.links {
+  display: flex;
+  flex-basis: 20%;
+  font-size: 2rem;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 768px) {
