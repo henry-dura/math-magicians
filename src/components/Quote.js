@@ -47,9 +47,8 @@ function FetchData() {
       {quote && quote.map((item) => (
         <div className="quote-items" key={item.id}>
           <p>{item.quote}</p>
-          <p>
-            By
-            <strong>{` ${item.author}`}</strong>
+          <p className="author">
+            <strong>{`By ${item.author}`}</strong>
           </p>
         </div>
       ))}
