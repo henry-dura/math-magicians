@@ -17,7 +17,6 @@
   - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -58,7 +57,7 @@ This project was built using React.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-[COMING SOON](##)
+[View Live](https://herox-maths.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,18 +110,13 @@ npm start
 
 👤 **Henry Ikemefuna Ugwu**
 
-- GitHub: https://github.com/henry-dura
-- Twitter: https://twitter.com/henryikemefuna
-- LinkedIn: https://www.linkedin.com/in/henry-ikemefuna-ugwu-3a2613100/
+- GitHub: [View Github Page](https://github.com/henry-dura)
+- Twitter: [View Twitter Page](https://twitter.com/henryikemefuna)
+- LinkedIn: [View LinkedIn Page](https://www.linkedin.com/in/henry-ikemefuna-ugwu-3a2613100/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- Future features -->
-
-## 🔭 Future Features <a name="future-features"></a>
-- [ ] **Add more functionality to the calculator**
-- [ ] **Add Live demo link**
 
 <!-- CONTRIBUTING -->
 
